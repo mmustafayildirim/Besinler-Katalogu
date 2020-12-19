@@ -1,2 +1,2 @@
 # Besinler Kitabi
- Besinleri Ne kadar kalori olduğunu göstren uygulamam
+ Besinlerin ne kadar kalori olduğunu gösteren uygulamam
