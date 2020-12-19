@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="besin"
+            type="com.mustafayildirim.besinlerkitabi.model.Besin" />
+        <variable
+            name="listener"
+            type="com.mustafayildirim.besinlerkitabi.adapter.BesinClickListener" />
+    </data>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:gravity="center"
+    android:onClick="@{listener::besinTiklandi}">
+
+
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:layout_margin="3dp"
+        android:downloadImage="@{besin.besinGorsel}"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/besin_uuid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@{String.valueOf(besin.uuid)}"
+            />
+        <TextView
+            android:id="@+id/isim"
+            android:text="@{besin.besinIsim}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/kalori"
+            android:text="@{besin.besinKalori}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
+</layout>
